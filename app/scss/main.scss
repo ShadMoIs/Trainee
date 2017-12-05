@@ -70,6 +70,7 @@ header {
     ul {
         list-style: none;
         padding: 0;
+       margin: 0;
         @media screen and (min-width: $mQ-1) {
             border-bottom: 1px solid white;
         }
@@ -251,17 +252,7 @@ h2 {
         transform-origin: top left;
         transform: skewY(3deg);
         background-color: $main-color-white;
-        top: 170px;
-        height: 200px;
-        @include mQ(1576px) {
-            top: 250px;
-        }
-        @media screen and (max-width:$mQ-1) {
-            display: none;
-        }
-        @include mQ(1160px) {
-            top: 300px;
-        }
+        top: 80%;
     }
 }
 
@@ -493,7 +484,7 @@ article {
 }
 
 .panels {
-    padding: 35px 150px 150px 150px;
+    padding: 35px 150px 0px 150px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -533,6 +524,42 @@ article {
 
 /* end panels*/
 
+/* slider start */
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    
+    .slider {
+        overflow: hidden;
+        width: 70%;
+        margin: 0 auto;
+        height: 600px;
+        figure {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            text-align: left;
+            font-size: 0;
+            animation: 10s slidy infinite;
+            img {
+                width: 20%;
+                float: left;
+            }
+        }
+    }
+
+ 
+/* slider end */
 
 /* start footer*/
 
