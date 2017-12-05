@@ -41,8 +41,8 @@ $color) {
 }
 
 @mixin panels() {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 10px;
     cursor: pointer;
 }
@@ -480,14 +480,15 @@ article {
 /* start panels*/
 
 .wrapperPanels {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .panels {
-    padding: 35px 150px 0px 150px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0;
     @include mQ(1160px) {
         padding: 0;
     }
@@ -542,7 +543,7 @@ article {
         overflow: hidden;
         width: 70%;
         margin: 0 auto;
-        height: 600px;
+        height: 800px;
         figure {
             position: relative;
             width: 500%;

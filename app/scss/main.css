@@ -495,14 +495,15 @@ article:first-of-type {
 /* end about.html*/
 /* start panels*/
 .wrapperPanels {
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .panels {
-  padding: 35px 150px 0px 150px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0;
 }
 
 @media screen and (max-width: 1160px) {
@@ -526,8 +527,8 @@ article:first-of-type {
 .panels .front {
   position: absolute;
   background-color: wheat;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   margin: 10px;
   cursor: pointer;
 }
@@ -535,8 +536,8 @@ article:first-of-type {
 .panels .back {
   transform: rotateY(90deg);
   background-color: #6495ed;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   margin: 10px;
   cursor: pointer;
 }
@@ -586,7 +587,7 @@ article:first-of-type {
   overflow: hidden;
   width: 70%;
   margin: 0 auto;
-  height: 600px;
+  height: 800px;
 }
 
 .slider figure {
