@@ -51,6 +51,7 @@ $color) {
     background: linear-gradient(90deg, cornflowerblue 10%, wheat 91%);
 }
 
+
 body,
 html {
     font-family: $font-main;
@@ -355,6 +356,8 @@ h3 {
 
 h4 {
     font-size: 2rem;
+    margin: 0;
+    padding: 0;
     color: $main-color-cornflowerblue;
     animation: bounce 1.2s ease-out;
     @include mQ(400px) {
