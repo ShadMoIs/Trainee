@@ -15,13 +15,14 @@ $font-size-11: 1.8rem;
 $main-color-wheat:wheat;
 $main-color-cornflowerblue:#6495ed;
 $main-color-white: white;
-
-@mixin border-all($width,$style,$color) {
+@mixin border-all($width,
+$style,
+$color) {
     border-width: $width;
     border-style: $style;
     border-color: $color;
 }
- 
+
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
@@ -30,15 +31,15 @@ $main-color-white: white;
     border-radius: $radius;
 }
 
-@mixin panels(){
+@mixin panels() {
     width: 250px;
     height: 250px;
     margin: 10px;
     cursor: pointer;
 }
 
-@mixin linearGradient(){
-    background:linear-gradient(90deg, cornflowerblue 10%, wheat 91%);
+@mixin linearGradient() {
+    background: linear-gradient(90deg, cornflowerblue 10%, wheat 91%);
 }
 
 body,
@@ -253,7 +254,9 @@ h3 {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    @include border-all(1px,solid, white);
+    @include border-all(1px,
+    solid,
+    white);
 }
 
 
@@ -299,7 +302,7 @@ article {
     justify-content: center;
     &:first-of-type {
         padding-top: 150px;
-}
+    }
 }
 
 .teaserBubble,
@@ -309,7 +312,6 @@ article {
 .buttonTeaserBubbleNext {
     display: inline-block;
 }
-
 
 .teaserBubble {
     width: 250px;
@@ -392,15 +394,14 @@ article {
     .front {
         position: absolute;
         background-color: $main-color-wheat;
-        @include  panels;
+        @include panels;
     }
     .back {
         transform: rotateY(90deg);
         background-color: $main-color-cornflowerblue;
-        @include  panels;
+        @include panels;
     }
 }
-
 
 @keyframes twirl {
     0% {
@@ -414,7 +415,35 @@ article {
 
 /* end panels*/
 
+/* start slider */
+.sliderConatiner{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background-color: green;
+    }
 
+.slider{
+    width: 600px;
+    height: 200px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    transition: all 1s ease-in-out;
+    .sliderImage{
+        background: url("../img/bild2.jpg");
+        width: 600px;
+        height: 200px;
+        float: left;
+        background-color: green;
+        &:hover{
+            left: -300px;
+        }
+    }
+}
+
+/* end slider */
 
 /* start footer*/
 
@@ -431,3 +460,4 @@ footer {
 
 
 /* end footer*/
+
