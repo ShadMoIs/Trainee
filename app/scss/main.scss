@@ -15,6 +15,15 @@ $font-size-11: 1.8rem;
 $main-color-wheat:wheat;
 $main-color-cornflowerblue:#6495ed;
 $main-color-white: white;
+$mQ-1: 760px;
+$mQ-2: 600px;
+//alternative für media queries
+@mixin mQ($arg) {
+    @media screen and (max-width: $arg) {
+        @content;
+    }
+}
+
 @mixin border-all($width,
 $style,
 $color) {
@@ -61,6 +70,9 @@ header {
     ul {
         list-style: none;
         padding: 0;
+        @media screen and (min-width: $mQ-1) {
+            border-bottom: 1px solid white;
+        }
     }
     a {
         text-decoration: none;
@@ -69,6 +81,10 @@ header {
         padding: 25px 35px;
         color: $main-color-cornflowerblue;
         letter-spacing: 2;
+        @media screen and (max-width: $mQ-1) {
+            padding: 10px 10px;
+            border-bottom: 1px solid white;
+        }
         &:hover {
             background-color: $main-color-white;
         }
@@ -86,6 +102,15 @@ label {
     line-height: 70px;
     display: none;
     color: $main-color-cornflowerblue;
+    @media screen and (max-width: $mQ-1) {
+        border-bottom: 1px solid white;
+        cursor: pointer;
+        display: block;
+        padding: 0 30px 0 0;
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid white;
+    }
 }
 
 #toggle {
@@ -107,6 +132,11 @@ label {
 .textParallax {
     height: auto;
     @include linearGradient;
+    &:after {
+        @include mQ(800px) {
+            top: 350px;
+        }
+    }
 }
 
 h1 {
@@ -115,12 +145,25 @@ h1 {
     font-size: $font-size-2;
     line-height: 10rem;
     animation: slidein 2s cubic-bezier(.04, .62, .22, 1.02);
+    @media screen and (max-width: $mQ-1) {
+        font-size: 3.5rem;
+    }
+    @include mQ(400px) {
+        font-size: 2.5rem;
+        line-height: 5rem;
+    }
 }
 
 h2 {
     font-family: 'Cabin Sketch', cursive;
     margin: 0;
     font-size: $font-size-3;
+    @media screen and (max-width: $mQ-1) {
+        font-size: 2rem;
+    }
+    @include mQ(400px) {
+        font-size: 1.5rem;
+    }
 }
 
 
@@ -129,8 +172,17 @@ h2 {
 .introduction {
     padding: 450px 50px 50px 150px;
     width: 60%;
+    @media screen and (max-width: $mQ-1) {
+        padding: 300px 25px 25px 25px;
+    }
+    @include mQ(400px) {
+        width: 100%;
+    }
     p {
         font-size: $font-size-4;
+        @media screen and (max-width: $mQ-1) {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -162,6 +214,9 @@ h2 {
 .information {
     padding: 35px 150px 150px 150px;
     border-top: 1px solid white;
+    @media screen and (max-width: $mQ-1) {
+        font-size: 1rem;
+    }
 }
 
 .extraInformation {
@@ -171,6 +226,10 @@ h2 {
     p {
         width: 50%;
         padding-right: 20px;
+        @media screen and (max-width: $mQ-1) {
+            width: 100%;
+            padding: 20px 20px 0 0;
+        }
     }
 }
 
@@ -194,6 +253,15 @@ h2 {
         background-color: $main-color-white;
         top: 170px;
         height: 200px;
+        @include mQ(1576px) {
+            top: 250px;
+        }
+        @media screen and (max-width:$mQ-1) {
+            display: none;
+        }
+        @include mQ(1160px) {
+            top: 300px;
+        }
     }
 }
 
@@ -205,6 +273,9 @@ h2 {
 
 h3 {
     font-size: $font-size-6;
+    @media screen and (max-width: $mQ-2) {
+        font-size: 1.3rem;
+    }
 }
 
 .fa.fa-bug,
@@ -227,6 +298,16 @@ h3 {
     padding-bottom: 25px;
     animation: fadeIn 2s ease-out;
     cursor: pointer;
+    @include mQ(1480px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .circle {
+        @media screen and (max-width: $mQ-2) {
+            width: 40px;
+            height: 40px;
+        }
+    }
     .iconCircle {
         padding: 0 120px;
         list-style: none;
@@ -234,9 +315,25 @@ h3 {
         transition: all 1s ease-in-out;
         font-weight: bold;
         width: 50%;
+        @media screen and (max-width: $mQ-2) {
+            padding: 0 10px;
+        }
+        @include mQ(300px) {
+            margin-bottom: 30px;
+        }
         &:hover {
             transform: scale(1.1);
         }
+        @include mQ(790px) {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.iconCircle:nth-child(-n+2) {
+    @include mQ(1480px) {
+        margin-bottom: 50px;
     }
 }
 
@@ -269,6 +366,10 @@ h4 {
     font-size: 2rem;
     color: $main-color-cornflowerblue;
     animation: bounce 1.2s ease-out;
+    @include mQ(400px) {
+        text-align: center;
+        padding-top: 15px;
+    }
 }
 
 .faContainer {
@@ -276,6 +377,9 @@ h4 {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: baseline;
+    @include mQ(400px) {
+        justify-content: center;
+    }
 }
 
 .fa.fa-user,
@@ -322,6 +426,10 @@ article {
     box-shadow: 2px 2px 5px #888;
     transform: scale(1);
     transition: all 0.6s ease-in-out;
+    @include mQ(400px) {
+        width: 150px;
+        height: 150px;
+    }
     &:hover {
         opacity: 0.4;
         cursor: pointer;
@@ -333,6 +441,10 @@ article {
     padding: 20px 65px;
     border-bottom: 1px solid wheat;
     width: 70%;
+    @include mQ(950px) {
+        width: 90%;
+        padding: 0 0 20px 0;
+    }
 }
 
 .textTeaserBubble {
@@ -365,6 +477,9 @@ article {
     padding-top: 50px;
     font-size: $font-size-9;
     text-transform: uppercase;
+    @include mQ(400px) {
+        font-size: 1.8rem;
+    }
 }
 
 
@@ -382,6 +497,9 @@ article {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    @include mQ(1160px) {
+        padding: 0;
+    }
     li {
         list-style: none;
         &:hover .front {
@@ -415,35 +533,6 @@ article {
 
 /* end panels*/
 
-/* start slider */
-.sliderConatiner{
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    background-color: green;
-    }
-
-.slider{
-    width: 600px;
-    height: 200px;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    transition: all 1s ease-in-out;
-    .sliderImage{
-        background: url("../img/bild2.jpg");
-        width: 600px;
-        height: 200px;
-        float: left;
-        background-color: green;
-        &:hover{
-            left: -300px;
-        }
-    }
-}
-
-/* end slider */
 
 /* start footer*/
 
@@ -461,3 +550,24 @@ footer {
 
 /* end footer*/
 
+
+/* -------------------760px------------------------ */
+
+@media screen and (min-width:760px) {
+    .menu {
+        text-align: center;
+    }
+    ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .menu {
+        display: none;
+    }
+    #toggle:checked+.menu {
+        display: block;
+    }
+}

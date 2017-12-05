@@ -17,6 +17,12 @@ header {
   padding: 0;
 }
 
+@media screen and (min-width: 760px) {
+  .nav ul {
+    border-bottom: 1px solid white;
+  }
+}
+
 .nav a {
   text-decoration: none;
   text-align: center;
@@ -24,6 +30,13 @@ header {
   padding: 25px 35px;
   color: #6495ed;
   letter-spacing: 2;
+}
+
+@media screen and (max-width: 760px) {
+  .nav a {
+    padding: 10px 10px;
+    border-bottom: 1px solid white;
+  }
 }
 
 .nav a:hover {
@@ -37,6 +50,18 @@ label {
   line-height: 70px;
   display: none;
   color: #6495ed;
+}
+
+@media screen and (max-width: 760px) {
+  label {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    display: block;
+    padding: 0 30px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid white;
+  }
 }
 
 #toggle {
@@ -56,6 +81,12 @@ label {
   background: linear-gradient(90deg, cornflowerblue 10%, wheat 91%);
 }
 
+@media screen and (max-width: 800px) {
+  .textParallax:after {
+    top: 350px;
+  }
+}
+
 h1 {
   font-family: 'Cabin Sketch', cursive;
   margin: 0;
@@ -64,10 +95,35 @@ h1 {
   animation: slidein 2s cubic-bezier(0.04, 0.62, 0.22, 1.02);
 }
 
+@media screen and (max-width: 760px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 5rem;
+  }
+}
+
 h2 {
   font-family: 'Cabin Sketch', cursive;
   margin: 0;
   font-size: 3rem;
+}
+
+@media screen and (max-width: 760px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 /* start .introduction */
@@ -76,8 +132,26 @@ h2 {
   width: 60%;
 }
 
+@media screen and (max-width: 760px) {
+  .introduction {
+    padding: 300px 25px 25px 25px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .introduction {
+    width: 100%;
+  }
+}
+
 .introduction p {
   font-size: 1.3rem;
+}
+
+@media screen and (max-width: 760px) {
+  .introduction p {
+    font-size: 1rem;
+  }
 }
 
 .button {
@@ -117,6 +191,12 @@ h2 {
   border-top: 1px solid white;
 }
 
+@media screen and (max-width: 760px) {
+  .information {
+    font-size: 1rem;
+  }
+}
+
 .extraInformation {
   display: flex;
   flex-wrap: wrap;
@@ -126,6 +206,13 @@ h2 {
 .extraInformation p {
   width: 50%;
   padding-right: 20px;
+}
+
+@media screen and (max-width: 760px) {
+  .extraInformation p {
+    width: 100%;
+    padding: 20px 20px 0 0;
+  }
 }
 
 /* parallax end */
@@ -148,10 +235,34 @@ h2 {
   height: 200px;
 }
 
+@media screen and (max-width: 1576px) {
+  .textParallax:after {
+    top: 250px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .textParallax:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .textParallax:after {
+    top: 300px;
+  }
+}
+
 /* diagonal end */
 /* list of icons start */
 h3 {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  h3 {
+    font-size: 1.3rem;
+  }
 }
 
 .fa.fa-bug,
@@ -176,6 +287,20 @@ h3 {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1480px) {
+  .listOfIcons {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .listOfIcons .circle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .listOfIcons .iconCircle {
   padding: 0 120px;
   list-style: none;
@@ -185,8 +310,33 @@ h3 {
   width: 50%;
 }
 
+@media screen and (max-width: 600px) {
+  .listOfIcons .iconCircle {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .listOfIcons .iconCircle {
+    margin-bottom: 30px;
+  }
+}
+
 .listOfIcons .iconCircle:hover {
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 790px) {
+  .listOfIcons .iconCircle {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1480px) {
+  .iconCircle:nth-child(-n+2) {
+    margin-bottom: 50px;
+  }
 }
 
 .textIconCircle {
@@ -220,11 +370,24 @@ h4 {
   animation: bounce 1.2s ease-out;
 }
 
+@media screen and (max-width: 400px) {
+  h4 {
+    text-align: center;
+    padding-top: 15px;
+  }
+}
+
 .faContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: baseline;
+}
+
+@media screen and (max-width: 400px) {
+  .faContainer {
+    justify-content: center;
+  }
 }
 
 .fa.fa-user,
@@ -278,6 +441,13 @@ article:first-of-type {
   transition: all 0.6s ease-in-out;
 }
 
+@media screen and (max-width: 400px) {
+  .teaserBubble {
+    width: 150px;
+    height: 150px;
+  }
+}
+
 .teaserBubble:hover {
   opacity: 0.4;
   cursor: pointer;
@@ -288,6 +458,13 @@ article:first-of-type {
   padding: 20px 65px;
   border-bottom: 1px solid wheat;
   width: 70%;
+}
+
+@media screen and (max-width: 950px) {
+  .contentTeaserBubble {
+    width: 90%;
+    padding: 0 0 20px 0;
+  }
 }
 
 .textTeaserBubble {
@@ -327,6 +504,12 @@ article:first-of-type {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 400px) {
+  .textInBubble {
+    font-size: 1.8rem;
+  }
+}
+
 /* end about.html*/
 /* start panels*/
 .wrapperPanels {
@@ -338,6 +521,12 @@ article:first-of-type {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+@media screen and (max-width: 1160px) {
+  .panels {
+    padding: 0;
+  }
 }
 
 .panels li {
@@ -380,37 +569,6 @@ article:first-of-type {
 }
 
 /* end panels*/
-/* start slider */
-.sliderConatiner {
-  width: 300px;
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-  background-color: green;
-}
-
-.slider {
-  width: 600px;
-  height: 200px;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  transition: all 1s ease-in-out;
-}
-
-.slider .sliderImage {
-  background: url("../img/bild2.jpg");
-  width: 600px;
-  height: 200px;
-  float: left;
-  background-color: green;
-}
-
-.slider .sliderImage:hover {
-  left: -300px;
-}
-
-/* end slider */
 /* start footer*/
 footer {
   position: relative;
@@ -425,3 +583,22 @@ footer p {
 }
 
 /* end footer*/
+/* -------------------760px------------------------ */
+@media screen and (min-width: 760px) {
+  .menu {
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .menu {
+    display: none;
+  }
+  #toggle:checked + .menu {
+    display: block;
+  }
+}
