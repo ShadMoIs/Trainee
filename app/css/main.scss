@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+$font-main: 'Abel',
+sans-serif;
+$font-size-1: 26px;
+$font-size-2: 5rem;
+$font-size-3: 3rem;
+$font-size-4: 1.3rem;
+$font-size-5: 1.5rem;
+$font-size-6: 2rem;
+$font-size-7: 1rem;
+$font-size-8: 1.2rem;
+$font-size-9: 2.5rem;
+$font-size-10: 3.5rem;
+$font-size-11: 1.8rem;
+$main-color-wheat:wheat;
+$main-color-cornflowerblue:#6495ed;
+$main-color-white: white;
+
+@mixin border-all($width,$style,$color) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+}
+ 
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin panels(){
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+@mixin linearGradient(){
+    background:linear-gradient(90deg, cornflowerblue 10%, wheat 91%);
+}
+
+body,
+html {
+    font-family: $font-main;
+}
+
+
+/* nav start */
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: $main-color_wheat;
+    z-index: 10;
+}
+
+.nav {
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        padding: 25px 35px;
+        color: $main-color-cornflowerblue;
+        letter-spacing: 2;
+        &:hover {
+            background-color: $main-color-white;
+        }
+    }
+}
+
+
+/* nav end */
+
+
+/* toggle start */
+
+label {
+    font-size: $font-size-1;
+    line-height: 70px;
+    display: none;
+    color: $main-color-cornflowerblue;
+}
+
+#toggle {
+    display: none;
+}
+
+
+/* toggle end */
+
+
+/* parallax start */
+
+.main {
+    min-height: 600px;
+    background: url("../img/bild1.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+
+.textParallax {
+    height: auto;
+    @include linearGradient;
+}
+
+h1 {
+    font-family: 'Cabin Sketch', cursive;
+    margin: 0;
+    font-size: $font-size-2;
+    line-height: 10rem;
+    animation: slidein 2s cubic-bezier(.04, .62, .22, 1.02);
+}
+
+h2 {
+    font-family: 'Cabin Sketch', cursive;
+    margin: 0;
+    font-size: $font-size-3;
+}
+
+
+/* start .introduction */
+
+.introduction {
+    padding: 450px 50px 50px 150px;
+    width: 60%;
+    p {
+        font-size: $font-size-4;
+    }
+}
+
+.button {
+    @include border-all(1px,
+    solid,
+    white);
+    margin-top: 50px;
+    width: 45%;
+    @include border-radius (15px);
+}
+
+.buttonNext {
+    text-align: center;
+    padding: 10px;
+    font-size: $font-size-5;
+    color: $main-color-white;
+    &:hover {
+        background-color: $main-color-wheat;
+        color: $main-color-cornflowerblue;
+        cursor: pointer;
+        @include border-radius (15px);
+    }
+}
+
+
+/* start .information */
+
+.information {
+    padding: 35px 150px 150px 150px;
+    border-top: 1px solid white;
+}
+
+.extraInformation {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+    p {
+        width: 50%;
+        padding-right: 20px;
+    }
+}
+
+
+/* parallax end */
+
+
+/* diagonal start */
+
+.textParallax {
+    position: relative;
+    width: 100%;
+    height: auto;
+    &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        transform-origin: top left;
+        transform: skewY(3deg);
+        background-color: $main-color-white;
+        top: 170px;
+        height: 200px;
+    }
+}
+
+
+/* diagonal end */
+
+
+/* list of icons start */
+
+h3 {
+    font-size: $font-size-6;
+}
+
+.fa.fa-bug,
+.fa.fa-quote-right,
+.fa.fa-taxi,
+.fa.fa-picture-o {
+    font-size: $font-size-6;
+    padding-top: 15px;
+}
+
+.listOfIcons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: $main-color-white;
+    position: relative;
+    top: 10px;
+    text-align: center;
+    padding-bottom: 25px;
+    animation: fadeIn 2s ease-out;
+    cursor: pointer;
+    .iconCircle {
+        padding: 0 120px;
+        list-style: none;
+        color: $main-color-cornflowerblue;
+        transition: all 1s ease-in-out;
+        font-weight: bold;
+        width: 50%;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.textIconCircle {
+    font-size: $font-size-7;
+    font-weight: 100;
+    width: 100%;
+}
+
+.circle {
+    background-color: $main-color-wheat;
+    width: 60px;
+    height: 60px;
+    @include border-radius (100px);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    @include border-all(1px,solid, white);
+}
+
+
+/* list of icons end */
+
+
+/* start about.html*/
+
+h4 {
+    font-size: 2rem;
+    color: $main-color-cornflowerblue;
+    animation: bounce 1.2s ease-out;
+}
+
+.faContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.fa.fa-user,
+.fa.fa-clock-o,
+.fa.fa-comments-o {
+    color: $main-color-cornflowerblue;
+    line-height: 3rem;
+    font-size: $font-size-8;
+}
+
+.fa.fa-clock-o,
+.fa.fa-comments-o {
+    padding-left: 25px;
+}
+
+span {
+    padding-left: 8px;
+}
+
+article {
+    padding-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &:first-of-type {
+        padding-top: 150px;
+}
+}
+
+.teaserBubble,
+.contentTeaserBubble,
+.textTeaserBubble,
+.buttonTeaserBubble,
+.buttonTeaserBubbleNext {
+    display: inline-block;
+}
+
+
+.teaserBubble {
+    width: 250px;
+    height: 250px;
+    @include border-radius (50%);
+    background: url("../img/bild2.jpg") no-repeat;
+    background-size: cover;
+    box-shadow: 2px 2px 5px #888;
+    transform: scale(1);
+    transition: all 0.6s ease-in-out;
+    &:hover {
+        opacity: 0.4;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+.contentTeaserBubble {
+    padding: 20px 65px;
+    border-bottom: 1px solid wheat;
+    width: 70%;
+}
+
+.textTeaserBubble {
+    width: 100%;
+}
+
+.buttonTeaserBubble {
+    padding-top: 35px;
+    width: auto;
+}
+
+.buttonTeaserBubbleNext {
+    padding: 10px;
+    text-align: center;
+    color: $main-color-cornflowerblue;
+    @include border-all(1px,
+    solid,
+    cornflowerblue);
+    @include border-radius (10px);
+    &:hover {
+        background-color: $main-color-wheat;
+        color: $main-color-cornflowerblue;
+        cursor: pointer;
+        display: block;
+    }
+}
+
+.textInBubble {
+    text-align: center;
+    padding-top: 50px;
+    font-size: $font-size-9;
+    text-transform: uppercase;
+}
+
+
+/* end about.html*/
+
+
+/* start panels*/
+
+.wrapperPanels {
+    width: 100%;
+}
+
+.panels {
+    padding: 35px 150px 150px 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+        list-style: none;
+        &:hover .front {
+            animation: twirl 0.2s ease-in forwards;
+        }
+        &:hover .back {
+            animation: twirl 0.2s 0.2s ease-out forwards reverse;
+        }
+    }
+    .front {
+        position: absolute;
+        background-color: $main-color-wheat;
+        @include  panels;
+    }
+    .back {
+        transform: rotateY(90deg);
+        background-color: $main-color-cornflowerblue;
+        @include  panels;
+    }
+}
+
+
+@keyframes twirl {
+    0% {
+        transform: rotateY(0deg)
+    }
+    100% {
+        transform: rotateY(90deg)
+    }
+}
+
+
+/* end panels*/
+
+
+/* start footer*/
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: $main-color-wheat;
+    p {
+        padding-top: 15px;
+    }
+}
+
+
+/* end footer*/
