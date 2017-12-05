@@ -17,6 +17,7 @@ $main-color-cornflowerblue:#6495ed;
 $main-color-white: white;
 $mQ-1: 760px;
 $mQ-2: 600px;
+$mQ-3: 1300px;
 //alternative für media queries
 @mixin mQ($arg) {
     @media screen and (max-width: $arg) {
@@ -147,8 +148,11 @@ h1 {
     font-size: $font-size-2;
     line-height: 10rem;
     animation: slidein 2s cubic-bezier(.04, .62, .22, 1.02);
+    @media screen and (max-width: $mQ-3) {
+        font-size: 2.5rem;
+    }
     @media screen and (max-width: $mQ-1) {
-        font-size: 3.5rem;
+        font-size: 15rem;
     }
     @include mQ(400px) {
         font-size: 2.5rem;
@@ -172,9 +176,10 @@ h2 {
 /* start .introduction */
 
 .introduction {
-    padding: 450px 50px 50px 150px;
-    width: 60%;
-    @media screen and (max-width: $mQ-1) {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 10%;
+    @media screen and (max-width: $mQ-2) {
         padding: 300px 25px 25px 25px;
     }
     @include mQ(400px) {
@@ -281,7 +286,8 @@ h3 {
 .listOfIcons {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 70%;
+    margin:0 auto;
     height: auto;
     background-color: $main-color-white;
     position: relative;
@@ -301,7 +307,6 @@ h3 {
         }
     }
     .iconCircle {
-        padding: 0 120px;
         list-style: none;
         color: $main-color-cornflowerblue;
         transition: all 1s ease-in-out;
