@@ -1,0 +1,861 @@
+ /* * {
+border: 1px solid black;
+}     */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Abel', sans-serif;
+}
+
+
+/* nav start */
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: wheat;
+    z-index: 10;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 25px 35px;
+    color: rgb(61, 106, 184);
+    letter-spacing: 2;
+}
+
+.nav a:hover {
+    background-color: white;
+}
+
+
+/* nav end */
+
+
+/* toggle start */
+
+label {
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    color: rgb(61, 106, 184);
+}
+
+#toggle {
+    display: none;
+}
+
+
+/* toggle end */
+
+
+/* parallax start */
+
+.main {
+    /* height of background-image */
+    min-height: 600px;
+    /* important for parallax */
+    /* note background order */
+    background: url("../img/bild1.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+
+.textParallax {
+    height: auto;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, cornflowerblue), color-stop(91%, wheat));
+    background-image: linear-gradient(90deg, cornflowerblue 10%, wheat 91%);
+}
+
+h1,
+h2 {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+h1 {
+    margin: 0;
+    font-size: 5rem;
+    line-height: 10rem;
+    -webkit-animation: slidein 2s cubic-bezier(.04, .62, .22, 1.02);
+            animation: slidein 2s cubic-bezier(.04, .62, .22, 1.02);
+}
+
+h2 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+
+/* start .introduction */
+
+.introduction {
+    padding: 450px 50px 50px 150px;
+    width: 60%;
+}
+
+.introduction p {
+    font-size: 1.3rem;
+}
+
+.button {
+    border: 1px solid white;
+    margin-top: 50px;
+    width: 45%;
+    border-radius: 15px;
+}
+
+.buttonNext:hover {
+    background-color: wheat;
+    color: cornflowerblue;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.buttonNext {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+/* start .information */
+
+.information {
+    padding: 35px 150px 150px 150px;
+    border-top: 1px solid white;
+}
+
+.extraInformation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.extraInformation p {
+    width: 50%;
+    padding-right: 20px;
+}
+
+
+/* parallax end */
+
+
+/* diagonal start */
+
+.textParallax {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.textParallax:after {
+    position: absolute;
+    /* content-->important for :after */
+    content: '';
+    width: 100%;
+    height: 100%;
+    /* important for diagonal */
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+    -webkit-transform: skewY(3deg);
+            transform: skewY(3deg);
+    background-color: white;
+    top: 170px;
+    height: 200px;
+}
+
+
+/* diagonal end */
+
+
+/* list of icons start */
+
+h3 {
+    font-size: 2rem;
+}
+
+.fa.fa-bug,
+.fa.fa-quote-right,
+.fa.fa-taxi,
+.fa.fa-picture-o {
+    font-size: 2rem;
+    padding-top: 15px;
+}
+
+.listOfIcons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* important for justify content */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    position: relative;
+    top: 10px;
+    text-align: center;
+    padding-bottom: 25px;
+    -webkit-animation: fadeIn 2s ease-out;
+            animation: fadeIn 2s ease-out;
+    cursor: pointer;
+}
+
+.listOfIcons .iconCircle {
+    padding: 0 120px;
+    list-style: none;
+    color: rgb(61, 106, 184);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    font-weight: bold;
+    width: 50%;
+}
+
+.listOfIcons .iconCircle:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+.textIconCircle {
+    font-size: 1rem;
+    font-weight: 100;
+    width: 100%;
+}
+
+.circle {
+    background-color: wheat;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 1px solid white;
+}
+
+
+/* list of icons end */
+
+
+/* start about.html*/
+
+h4 {
+    font-size: 2rem;
+    color: cornflowerblue;
+    -webkit-animation: bounce 1.2s ease-out;
+            animation: bounce 1.2s ease-out;
+    /* name of animation bounce */
+}
+
+.faContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+}
+
+.fa.fa-user,
+.fa.fa-clock-o,
+.fa.fa-comments-o {
+    color: cornflowerblue;
+    line-height: 3rem;
+    font-size: 1.2rem;
+}
+
+.fa.fa-clock-o,
+.fa.fa-comments-o {
+    padding-left: 25px;
+}
+
+span {
+    padding-left: 8px;
+}
+
+article {
+    padding-top: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+article:first-of-type {
+    /* first child does not work!!
+first-of-type represents the first sibling of its type in the list of children of its parent element.*/
+    padding-top: 150px;
+}
+
+.teaserBubble,
+.contentTeaserBubble,
+.textTeaserBubble,
+.buttonTeaserBubble,
+.buttonTeaserBubbleNext {
+    display: inline-block;
+}
+
+.teaserBubble {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: url("../img/bild2.jpg") no-repeat;
+    background-size: cover;
+    -webkit-box-shadow: 2px 2px 5px #888;
+            box-shadow: 2px 2px 5px #888;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    /* default */
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+
+.teaserBubble:hover {
+    opacity: 0.4;
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+.contentTeaserBubble {
+    width: 70%;
+}
+
+.textTeaserBubble {
+    width: 100%;
+}
+
+.contentTeaserBubble {
+    padding: 20px 65px;
+    border-bottom: 1px solid wheat;
+}
+
+.buttonTeaserBubble {
+    padding-top: 35px;
+    width: auto;
+}
+
+.buttonTeaserBubbleNext {
+    padding: 10px;
+    text-align: center;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    border-radius: 10px;
+}
+
+.buttonTeaserBubbleNext:hover {
+    background-color: wheat;
+    color: cornflowerblue;
+    cursor: pointer;
+    display: block;
+}
+
+.textInBubble {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+
+/* end about.html*/
+
+
+/* start panels*/
+
+.wrapperPanels {
+    width: 100%;
+}
+
+.panels {
+    padding: 35px 150px 150px 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.panels li {
+    list-style: none;
+}
+
+.panels .front {
+    position: absolute;
+    /* important to take elements out of document float--> .back is now behind .front*/
+    background-color: wheat;
+    width: 250px;
+    /* must be same size as div.back */
+    height: 250px;
+    /* must be same size as div.back */
+    margin: 10px;
+    cursor: pointer;
+}
+
+.panels .back {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+    /* important for flipping animation */
+    background-color: cornflowerblue;
+    width: 250px;
+    /* must be same size as div.front */
+    height: 250px;
+    /* must be same size as div.front */
+    margin: 10px;
+    cursor: pointer;
+}
+
+.panels li:hover .front {
+    -webkit-animation: twirl 0.2s ease-in forwards;
+            animation: twirl 0.2s ease-in forwards;
+}
+
+.panels li:hover .back {
+    -webkit-animation: twirl 0.2s 0.2s ease-out forwards reverse;
+            animation: twirl 0.2s 0.2s ease-out forwards reverse;
+    /* forwards + reverse important  */
+    /* 0.2s delay-->rotates first out than back rotates in */
+}
+
+@-webkit-keyframes twirl {
+    0% {
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg)
+    }
+    100% {
+        -webkit-transform: rotateY(90deg);
+                transform: rotateY(90deg)
+    }
+}
+
+@keyframes twirl {
+    0% {
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg)
+    }
+    100% {
+        -webkit-transform: rotateY(90deg);
+                transform: rotateY(90deg)
+    }
+}
+
+
+/* end panels*/
+
+
+/* start footer*/
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: wheat;
+}
+
+footer p {
+    padding-top: 15px;
+}
+
+
+/* end footer*/
+
+
+/* -------------------media queries------------------------ */
+
+
+/* -------------------1576px------------------------ */
+
+@media screen and (max-width:1576px) {
+    .textParallax:after {
+        top: 250px;
+    }
+}
+
+
+/* -------------------1480px------------------------ */
+
+@media screen and (max-width:1480px) {
+    .listOfIcons {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+    .iconCircle:nth-child(-n+2) {
+        margin-bottom: 50px;
+    }
+}
+
+
+/* -------------------1160px------------------------ */
+
+@media screen and (max-width:1160px) {
+    .textParallax:after {
+        top: 300px;
+    }
+    .panels {
+        padding: 0;
+    }
+}
+
+
+/* -------------------950px------------------------ */
+
+@media screen and (max-width:950px) {
+    .contentTeaserBubble {
+        width: 90%;
+        padding: 0 0 20px 0;
+    }
+}
+
+
+/* -------------------800px------------------------ */
+
+@media screen and (max-width:800px) {
+    .textParallax:after {
+        top: 350px;
+    }
+}
+
+
+/* -------------------790px------------------------ */
+
+@media screen and (max-width:790px) {
+    .listOfIcons .iconCircle {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+
+/* -------------------760px------------------------ */
+
+@media screen and (min-width:760px) {
+    /* the flex container is the ul-element
+and the flex items are the li-elements */
+    .nav ul {
+        border-bottom: 1px solid white;
+    }
+    .menu {
+        text-align: center;
+    }
+    ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width:760px) {
+    label {
+        cursor: pointer;
+        display: block;
+        padding: 0 30px 0 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        border-bottom: 1px solid white;
+    }
+    .menu {
+        display: none;
+    }
+    #toggle:checked+.menu {
+        display: block;
+    }
+    .nav a {
+        padding: 10px 10px;
+        border-bottom: 1px solid white;
+    }
+    .extraInformation p {
+        width: 100%;
+        padding: 20px 20px 0 0;
+    }
+    .introduction {
+        padding: 300px 25px 25px 25px;
+    }
+    .introduction p {
+        font-size: 1rem;
+    }
+    .information {
+        padding: 25px;
+    }
+    .textParallax:after {
+        display: none;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* -------------------600px------------------------ */
+
+@media screen and (max-width:600px) {
+    .listOfIcons .circle {
+        width: 40px;
+        height: 40px;
+    }
+    .fa.fa-bug,
+    .fa.fa-quote-right,
+    .fa.fa-taxi,
+    .fa.fa-picture-o {
+        font-size: 1.5rem;
+        padding-top: 8px;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    .listOfIcons .iconCircle {
+        padding: 0 10px;
+    }
+}
+
+
+/* -------------------400px------------------------ */
+
+@media screen and (max-width:400px) {
+    .introduction {
+        width: 100%;
+    }
+    h1 {
+        font-size: 2.5rem;
+        line-height: 5rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .faContainer {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    h4 {
+        text-align: center;
+    }
+    .teaserBubble {
+        width: 150px;
+        height: 150px;
+    }
+    .textInBubble {
+        font-size: 1.8rem;
+    }
+    h4 {
+        padding-top: 15px;
+    }}
+    /* -------------------300px------------------------ */
+    @media screen and (max-width:300px) {
+        .listOfIcons .iconCircle {
+            margin-bottom: 30px;
+        }
+    }
+    /* -----------------Keyframes----------------- */
+    @-webkit-keyframes bounce
+    /* name of animation bounce */
+    {
+        0% {
+            /* time frame */
+            -webkit-transform: translateY(-100%);
+                    transform: translateY(-100%);
+            /* -100 top of its initial position */
+            opacity: 0;
+        }
+        5% {
+            -webkit-transform: translateY(-100%);
+                    transform: translateY(-100%);
+            opacity: 0;
+        }
+        15% {
+            /* object start moving to its original position.  */
+            /* decrease the padding-bottom */
+            -webkit-transform: translateY(0);
+                    transform: translateY(0);
+            padding-bottom: 5px;
+        }
+        30% {
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+        }
+        40% {
+            -webkit-transform: translateY(0%);
+                    transform: translateY(0%);
+            padding-bottom: 6px;
+        }
+        50% {
+            -webkit-transform: translateY(-30%);
+                    transform: translateY(-30%);
+        }
+        70% {
+            -webkit-transform: translateY(0%);
+                    transform: translateY(0%);
+            padding-bottom: 7px;
+        }
+        80% {
+            -webkit-transform: translateY(-15%);
+                    transform: translateY(-15%);
+        }
+        90% {
+            -webkit-transform: translateY(0%);
+                    transform: translateY(0%);
+            padding-bottom: 8px;
+        }
+        95% {
+            -webkit-transform: translateY(-7%);
+                    transform: translateY(-7%);
+        }
+        97% {
+            -webkit-transform: translateY(0%);
+                    transform: translateY(0%);
+            padding-bottom: 9px;
+        }
+        99% {
+            -webkit-transform: translateY(-3%);
+                    transform: translateY(-3%);
+        }
+        100% {
+            -webkit-transform: translateY(0);
+                    transform: translateY(0);
+            padding-bottom: 9px;
+            opacity: 1;
+        }
+    }
+    @keyframes bounce
+    /* name of animation bounce */
+    {
+        0% {
+            /* time frame */
+            -webkit-transform: translateY(-100%);
+                    transform: translateY(-100%);
+            /* -100 top of its initial position */
+            opacity: 0;
+        }
+        5% {
+            -webkit-transform: translateY(-100%);
+                    transform: translateY(-100%);
+            opacity: 0;
+        }
+        15% {
+            /* object start moving to its original position.  */
+            /* decrease the padding-bottom */
+            -webkit-transform: translateY(0);
+                    transform: translateY(0);
+            padding-bottom: 5px;
+        }
+        30% {
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+        }
+        40% {
+            -webkit-transform: translateY(0%);
+                    transform: translateY(0%);
+            padding-bottom: 6px;
+        }
+        50% {
+            -webkit-transform: translateY(-30%);
+                    transform: translateY(-30%);
+        }
+        70% {
+            -webkit-transform: translateY(0%);
+                    transform: translateY(0%);
+            padding-bottom: 7px;
+        }
+        80% {
+            -webkit-transform: translateY(-15%);
+                    transform: translateY(-15%);
+        }
+        90% {
+            -webkit-transform: translateY(0%);
+                    transform: translateY(0%);
+            padding-bottom: 8px;
+        }
+        95% {
+            -webkit-transform: translateY(-7%);
+                    transform: translateY(-7%);
+        }
+        97% {
+            -webkit-transform: translateY(0%);
+                    transform: translateY(0%);
+            padding-bottom: 9px;
+        }
+        99% {
+            -webkit-transform: translateY(-3%);
+                    transform: translateY(-3%);
+        }
+        100% {
+            -webkit-transform: translateY(0);
+                    transform: translateY(0);
+            padding-bottom: 9px;
+            opacity: 1;
+        }
+    }
+    @-webkit-keyframes slidein {
+        from {
+            margin-left: -600px;
+        }
+        to {
+            margin-left: 0%;
+        }
+    }
+    @keyframes slidein {
+        from {
+            margin-left: -600px;
+        }
+        to {
+            margin-left: 0%;
+        }
+    }
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
