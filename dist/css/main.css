@@ -12,7 +12,8 @@ header {
 
 .nav ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
   @media screen and (min-width: 760px) {
     .nav ul {
       border-bottom: 1px solid white; } }
@@ -77,9 +78,12 @@ h1 {
   line-height: 10rem;
   -webkit-animation: slidein 2s cubic-bezier(0.04, 0.62, 0.22, 1.02);
           animation: slidein 2s cubic-bezier(0.04, 0.62, 0.22, 1.02); }
+  @media screen and (max-width: 1300px) {
+    h1 {
+      font-size: 2.5rem; } }
   @media screen and (max-width: 760px) {
     h1 {
-      font-size: 3.5rem; } }
+      font-size: 15rem; } }
   @media screen and (max-width: 400px) {
     h1 {
       font-size: 2.5rem;
@@ -98,9 +102,10 @@ h2 {
 
 /* start .introduction */
 .introduction {
-  padding: 450px 50px 50px 150px;
-  width: 60%; }
-  @media screen and (max-width: 760px) {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 10%; }
+  @media screen and (max-width: 600px) {
     .introduction {
       padding: 300px 25px 25px 25px; } }
   @media screen and (max-width: 400px) {
@@ -170,17 +175,7 @@ h2 {
     -webkit-transform: skewY(3deg);
             transform: skewY(3deg);
     background-color: white;
-    top: 170px;
-    height: 200px; }
-    @media screen and (max-width: 1576px) {
-      .textParallax:after {
-        top: 250px; } }
-    @media screen and (max-width: 760px) {
-      .textParallax:after {
-        display: none; } }
-    @media screen and (max-width: 1160px) {
-      .textParallax:after {
-        top: 300px; } }
+    top: 80%; }
 
 /* diagonal end */
 /* list of icons start */
@@ -204,7 +199,8 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
   height: auto;
   background-color: white;
   position: relative;
@@ -225,7 +221,6 @@ h3 {
       width: 40px;
       height: 40px; } }
   .listOfIcons .iconCircle {
-    padding: 0 120px;
     list-style: none;
     color: #6495ed;
     -webkit-transition: all 1s ease-in-out;
@@ -271,6 +266,8 @@ h3 {
 /* start about.html*/
 h4 {
   font-size: 2rem;
+  margin: 0;
+  padding: 0;
   color: #6495ed;
   -webkit-animation: bounce 1.2s ease-out;
           animation: bounce 1.2s ease-out; }
@@ -395,10 +392,10 @@ article {
 /* end about.html*/
 /* start panels*/
 .wrapperPanels {
-  width: 100%; }
+  width: 70%;
+  margin: 0 auto; }
 
 .panels {
-  padding: 35px 150px 150px 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,7 +403,8 @@ article {
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  padding: 0; }
   @media screen and (max-width: 1160px) {
     .panels {
       padding: 0; } }
@@ -421,16 +419,16 @@ article {
   .panels .front {
     position: absolute;
     background-color: wheat;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 10px;
     cursor: pointer; }
   .panels .back {
     -webkit-transform: rotateY(90deg);
             transform: rotateY(90deg);
     background-color: #6495ed;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 10px;
     cursor: pointer; }
 
@@ -451,6 +449,65 @@ article {
             transform: rotateY(90deg); } }
 
 /* end panels*/
+/* slider start */
+@-webkit-keyframes slidy {
+  0% {
+    left: 0%; }
+  20% {
+    left: 0%; }
+  25% {
+    left: -100%; }
+  45% {
+    left: -100%; }
+  50% {
+    left: -200%; }
+  70% {
+    left: -200%; }
+  75% {
+    left: -300%; }
+  95% {
+    left: -300%; }
+  100% {
+    left: -400%; } }
+@keyframes slidy {
+  0% {
+    left: 0%; }
+  20% {
+    left: 0%; }
+  25% {
+    left: -100%; }
+  45% {
+    left: -100%; }
+  50% {
+    left: -200%; }
+  70% {
+    left: -200%; }
+  75% {
+    left: -300%; }
+  95% {
+    left: -300%; }
+  100% {
+    left: -400%; } }
+
+.slider {
+  overflow: hidden;
+  width: 70%;
+  margin: 0 auto;
+  height: 800px; }
+  .slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    -webkit-animation: 10s slidy infinite;
+            animation: 10s slidy infinite; }
+    .slider figure img {
+      width: 20%;
+      float: left; }
+
+/* slider end */
 /* start footer*/
 footer {
   position: relative;
