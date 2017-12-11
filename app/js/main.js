@@ -7,3 +7,4 @@ function Quadrat() {
 
 var los  = document.getElementById('los');
 los.addEventListener ('click', Quadrat, true);
+
