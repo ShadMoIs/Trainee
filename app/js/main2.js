@@ -1,9 +1,4 @@
-var require = ('./testwebpack.css')
-var require = ('./testwebpack.scss')
-
-
-
-function eins() {
+function zwei() {
   let Eingabe  = document.getElementById('Eingabe');
   var Ergebnis = Eingabe.value * Eingabe.value;
   alert("Das Quadrat von " + Eingabe.value + " = " + Ergebnis);
