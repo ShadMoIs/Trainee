@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+$font-main: 'Abel',
+sans-serif;
+$font-size-1: 26px;
+$font-size-2: 5rem;
+$font-size-3: 3rem;
+$font-size-4: 1.3rem;
+$font-size-5: 1.5rem;
+$font-size-6: 2rem;
+$font-size-7: 1rem;
+$font-size-8: 1.2rem;
+$font-size-9: 2.5rem;
+$font-size-10: 3.5rem;
+$font-size-11: 1.8rem;
+$main-color-wheat:wheat;
+$main-color-cornflowerblue:#6495ed;
+$main-color-white: white;
+$mQ-1: 760px;
+$mQ-2: 600px;
+$mQ-3: 1300px;
+//alternative für media queries
+@mixin mQ($arg) {
+    @media screen and (max-width: $arg) {
+        @content;
+    }
+}
+
+@mixin border-all($width,
+$style,
+$color) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin panels() {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+@mixin linearGradient() {
+    background: linear-gradient(90deg, cornflowerblue 10%, wheat 91%);
+}
+
+
+.nav {
+  ul {
+      list-style: none;
+      padding: 0;
+     margin: 0;
+      @media screen and (min-width: $mQ-1) {
+          border-bottom: 1px solid white;
+      }
+  }
+  a {
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      padding: 25px 35px;
+      color: $main-color-cornflowerblue;
+      letter-spacing: 2;
+      @media screen and (max-width: $mQ-1) {
+          padding: 10px 10px;
+          border-bottom: 1px solid white;
+      }
+      &:hover {
+          background-color: $main-color-white;
+      }
+  }
+}
+
+div{
+  background: url("https://mdn.mozillademos.org/files/7693/catfront.png");
+}

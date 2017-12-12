@@ -71,6 +71,7 @@
 
 
 var _require = './testwebpack.css';
+var _require = './testwebpack.scss';
 
 function Quadrat() {
   var Eingabe = document.getElementById('Eingabe');

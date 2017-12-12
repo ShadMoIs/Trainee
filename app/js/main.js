@@ -1,4 +1,7 @@
 var require = ('./testwebpack.css')
+var require = ('./testwebpack.scss')
+
+
 
 function Quadrat() {
   let Eingabe  = document.getElementById('Eingabe');
