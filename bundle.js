@@ -70,6 +70,8 @@
 "use strict";
 
 
+var _require = './testwebpack.css';
+
 function Quadrat() {
   var Eingabe = document.getElementById('Eingabe');
   var Ergebnis = Eingabe.value * Eingabe.value;
