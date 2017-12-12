@@ -5,6 +5,6 @@ function Quadrat() {
   Eingabe.value = 0;
  }
 
-var los  = document.getElementById('los');
+const los  = document.getElementById('los');
 los.addEventListener ('click', Quadrat, true);
 
